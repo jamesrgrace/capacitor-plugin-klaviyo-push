@@ -1,3 +1,5 @@
 export interface klaviyoPushPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  api(options: { apikey: string }): Promise<void>;
+  identify(options: { email: string }): Promise<void>;
+  assignToken(options: { token: Record<string, unknown> }): Promise<void>;
 }

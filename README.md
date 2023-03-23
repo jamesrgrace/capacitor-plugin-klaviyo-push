@@ -13,25 +13,62 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`api(...)`](#api)
+* [`identify(...)`](#identify)
+* [`assignToken(...)`](#assigntoken)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### api(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+api(options: { apikey: string; }) => Promise<void>
+```
+
+| Param         | Type                             |
+| ------------- | -------------------------------- |
+| **`options`** | <code>{ apikey: string; }</code> |
+
+--------------------
+
+
+### identify(...)
+
+```typescript
+identify(options: { email: string; }) => Promise<void>
 ```
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+| **`options`** | <code>{ email: string; }</code> |
 
 --------------------
+
+
+### assignToken(...)
+
+```typescript
+assignToken(options: { token: Record<string, unknown>; }) => Promise<void>
+```
+
+| Param         | Type                                                                         |
+| ------------- | ---------------------------------------------------------------------------- |
+| **`options`** | <code>{ token: <a href="#record">Record</a>&lt;string, unknown&gt;; }</code> |
+
+--------------------
+
+
+### Type Aliases
+
+
+#### Record
+
+Construct a type with a set of properties K of type T
+
+<code>{ [P in K]: T; }</code>
 
 </docgen-api>
